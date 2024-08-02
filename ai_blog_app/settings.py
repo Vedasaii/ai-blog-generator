@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-p7dww&&s_+@mky367j4xcxa3nyq_dc%02^(tyoomxy*f9%xv46
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -73,6 +73,7 @@ WSGI_APPLICATION = 'ai_blog_app.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
+
 
 DATABASES = {
     'default': {
