@@ -143,7 +143,7 @@ def download_audio(link):
                 'preferredcodec': 'mp3',
                 'preferredquality': '192',
             }],
-            'ffmpeg_location': 'C:/ffmpeg/bin/',  # Path to ffmpeg executable if not in PATH
+            'ffmpeg_location': 'ffmpeg/bin/',  # Path to ffmpeg executable if not in PATH
             'quiet': True,  # Suppress output
         }
         
