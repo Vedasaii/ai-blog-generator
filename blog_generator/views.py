@@ -15,7 +15,7 @@ import google.generativeai as genai
 import logging
 from .models import BlogPost
 
-ASSEMBLYAI_API_KEY = "41a45fc8b9754999a57db436da7cb42c"
+ASSEMBLYAI_API_KEY = os.environ.get('ASSEMBLYAI_API_KEY')
 
 
 logger = logging.getLogger(__name__)
@@ -86,7 +86,7 @@ def get_transcription(link):
   
 
 def generate_blog_from_transcription(transcription):
-    genai.configure(api_key= "AIzaSyDUDJ9SSWvFDaizCma1HYVmooPFmi2utKM")
+    genai.configure(api_key= os.environ.get('GEMINI_API_KEY'))
     prompt = f"Based on the following transcript from a YouTube video, write a comprehensive blog article. Write it based on the transcript, but do not make it look like a YouTube video and don't give any defined spaces to input something; make it a proper blog article:\n\n{transcription}\n\nArticle:"
     print(transcription)
     try:
