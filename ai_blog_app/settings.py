@@ -85,8 +85,11 @@ WSGI_APPLICATION = 'ai_blog_app.wsgi.application'
 #     }
 # }
 DATABASES = {
-    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+    'default': dj_database_url.parse("postgresql://blog_database_07il_user:Xfe6LFoXFkC2o3mibEXLIMnPmjx4zuTz@dpg-cqmdj13qf0us73aaotvg-a.oregon-postgres.render.com/blog_database_07il")
 }
+# DATABASES = {
+#     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+# }
 
 
 # Password validation
